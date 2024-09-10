@@ -1,0 +1,94 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: rgb(255, 242, 226);
+}
+
+h1 {
+    margin: 15px 10px;
+    font-size: 30px;
+
+    a {
+        color: rgb(255, 0, 0);
+    }
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+}
+
+.menu-bar {
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    background-color: #0c162b;
+
+    ul {
+        display: flex;
+        gap: 30px;
+        list-style-type: none;
+        position: absolute;
+        top: 30%;
+        right: 3%;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-around;
+
+        li {
+            position: relative;
+            height: 100%;
+            display: flex;
+            padding: 0 20px;
+
+            a {
+                color: azure;
+                font-size: 20px;
+                color: white;
+                text-decoration: none;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 500;
+                font-size: 18px;
+                padding: 10px 5px;
+                z-index: 1;
+            }
+        }
+    }
+}
+
+.menu-bar a::before {
+    position: absolute;
+    content: "";
+    height: 5%;
+    width: 0;
+    background-color: #0D7CFF;
+    bottom: 2%;
+    left: 0;
+    transition: all 0.5s;
+}
+
+.menu-bar li:hover a::before {
+    width: 100%;
+}

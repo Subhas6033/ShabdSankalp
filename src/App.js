@@ -18,12 +18,12 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about-us' element={<Aboutus />} />
-        <Route path='/services' element={<Services />} />
-        <Route path='/site-map' element={<Sitemap />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/contact' element={<Contactus />} />
+        <Route path='/shabdsankalp' element={<Home />} />
+        <Route path='shabdsankalp/about' element={<Aboutus />} />
+        <Route path='shabdsankalp/services' element={<Services />} />
+        <Route path='shabdsankalp/sitemap' element={<Sitemap />} />
+        <Route path='shabdsankalp/login' element={<Login />} />
+        <Route path='shabdsankalp/contact' element={<Contactus />} />
       </Routes>
       <Footer />
     </>

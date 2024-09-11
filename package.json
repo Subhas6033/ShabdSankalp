@@ -1,6 +1,6 @@
 {
   "name": "shabdsankalp",
-  
+  "homepage": "https://Subhas6033.github.io/shabdsankalp",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -17,6 +17,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "analyze": "npm run build -- --report",
     "format": "prettier --write **/*.{js,jsx,css,md}",
     "precommit": "npm run format",

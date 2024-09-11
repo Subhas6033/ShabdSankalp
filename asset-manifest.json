@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/shabdsankalp/static/css/main.90efec8e.css",
+    "main.js": "/shabdsankalp/static/js/main.bd32ecdd.js",
+    "static/js/453.ff4705dc.chunk.js": "/shabdsankalp/static/js/453.ff4705dc.chunk.js",
+    "index.html": "/shabdsankalp/index.html",
+    "main.90efec8e.css.map": "/shabdsankalp/static/css/main.90efec8e.css.map",
+    "main.bd32ecdd.js.map": "/shabdsankalp/static/js/main.bd32ecdd.js.map",
+    "453.ff4705dc.chunk.js.map": "/shabdsankalp/static/js/453.ff4705dc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.90efec8e.css",
+    "static/js/main.bd32ecdd.js"
+  ]
+}

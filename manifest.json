@@ -1,0 +1,8 @@
+{
+  "short_name": "Master Therapy",
+  "name": "This is the Site for the Master Therapy where the users or patitents can book appointments for the Treatment.",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

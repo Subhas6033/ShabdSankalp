@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/shabdsankalp/static/css/main.90efec8e.css",
-    "main.js": "/shabdsankalp/static/js/main.ca927a31.js",
+    "main.css": "/shabdsankalp/static/css/main.222df351.css",
+    "main.js": "/shabdsankalp/static/js/main.ab5c97e6.js",
     "static/js/453.ff4705dc.chunk.js": "/shabdsankalp/static/js/453.ff4705dc.chunk.js",
+    "static/media/insta logo.jpg": "/shabdsankalp/static/media/insta logo.4b8ff8026ef4d06852a8.jpg",
+    "static/media/twitter-logo-twitter-icon-twitter-symbol-free-free-vector.jpg": "/shabdsankalp/static/media/twitter-logo-twitter-icon-twitter-symbol-free-free-vector.9c968797026a6661b6fe.jpg",
     "index.html": "/shabdsankalp/index.html",
-    "main.90efec8e.css.map": "/shabdsankalp/static/css/main.90efec8e.css.map",
-    "main.ca927a31.js.map": "/shabdsankalp/static/js/main.ca927a31.js.map",
+    "main.222df351.css.map": "/shabdsankalp/static/css/main.222df351.css.map",
+    "main.ab5c97e6.js.map": "/shabdsankalp/static/js/main.ab5c97e6.js.map",
     "453.ff4705dc.chunk.js.map": "/shabdsankalp/static/js/453.ff4705dc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.90efec8e.css",
-    "static/js/main.ca927a31.js"
+    "static/css/main.222df351.css",
+    "static/js/main.ab5c97e6.js"
   ]
 }

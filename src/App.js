@@ -25,7 +25,7 @@ function App() {
         <Route path='shabdsankalp/login' element={<Login />} />
         <Route path='shabdsankalp/contact' element={<Contactus />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

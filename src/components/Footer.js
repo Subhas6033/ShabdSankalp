@@ -1,70 +1,37 @@
 
 import React from 'react';
-
-
-
+import './Footer.css';
+import facebookLogo from './img/Facebook-Logo-PNG-Isolated-HD.png';
+import instaLogo from './img/insta logo.jpg';
+import twitterLogo from './img/twitter-logo-twitter-icon-twitter-symbol-free-free-vector.jpg';
 
 export default function Footer() {
     return (
         <div>
             <>
-                <div className="footer-menu">
+                <footer>
                     <ul>
-
-                        <h4>Useful links</h4>
-                        <li><a href="https://www.india.gov.in/">National Portal of India</a></li>
-                        <li><a href="https://mohfw.gov.in/">Ministry of Health</a></li>
-                        <li><a href="https://www.wbhealth.gov.in/">West Bengal Health Portal</a></li>
-                        <li><a href="https://cghs.gov.in/CghsGovIn/faces/ViewPage.xhtml">Central government Health Scheme</a></li>
+                        <li><a href="#">Latter we will update this portion.</a></li>
+                        <li><a href="#">Latter we will update this portion.</a></li>
+                        <li><a href="#">Latter we will update this portion.</a></li>
+                        <li><a href="#">Latter we will update this portion.</a></li>
+                        <li><a href="#">Latter we will update this portion.</a></li>
                     </ul>
 
                     <ul>
-
-                        <h4>A</h4>
-                        <li><a href="">1</a></li>
-                        <li><a href="">1</a></li>
-                        <li><a href="">1</a></li>
-                        <li><a href="">1</a></li>
-                        <li><a href="">1</a></li>
+                        <li><a href="#">Latter we will update this portion.</a></li>
+                        <li><a href="#">Latter we will update this portion.</a></li>
+                        <li><a href="#">Latter we will update this portion.</a></li>
+                        <li><a href="#">Latter we will update this portion.</a></li>
+                        <li><a href="#">Latter we will update this portion.</a></li>
                     </ul>
 
                     <ul>
-
-                        <h4>B</h4>
-                        <li><a href="">1</a></li>
-                        <li><a href="">1</a></li>
-                        <li><a href="">1</a></li>
-                        <li><a href="">1</a></li>
-                        <li><a href="">1</a></li>
+                        <li><a href="https://www.facebook.com"><img src={facebookLogo} alt="facebook" /></a></li>
+                        <li><a href="https://www.instagram.com"><img src={instaLogo} alt="instagram" /></a></li>
+                        <li><a href="https://www.twitter.com"><img src={twitterLogo} alt="twitter" /></a></li>
                     </ul>
-
-                    <ul>
-
-                        <h4>C</h4>
-                        <li><a href="">1</a></li>
-                        <li><a href="">1</a></li>
-                        <li><a href="">1</a></li>
-                        <li><a href="">1</a></li>
-                        <li><a href="">1</a></li>
-                    </ul>
-
-                    <ul>
-
-                        <h4>D</h4>
-                        <li><a href="">1</a></li>
-                        <li><a href="">1</a></li>
-                        <li><a href="">1</a></li>
-                        <li><a href="">1</a></li>
-                        <li><a href="">1</a></li>
-                    </ul>
-
-                    <div className="social-media">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-
+                </footer>
             </>
         </div>
     )

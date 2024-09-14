@@ -1,0 +1,170 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Search bar container */
+.search-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 70px 0;
+}
+
+/* Search input field */
+.search-field input[type="text"] {
+    width: 500px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 08px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Change border color on focus */
+.search-field input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Search button */
+.search-field button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 16px;
+    border-radius: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Change button background on hover */
+.search-field button:hover {
+    background-color: #0056b3;
+}
+
+/* Overview section */
+
+.overview {
+    position: relative;
+    height: 20vw;
+    width: 100%;
+    max-width: 1300px;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+/* Animation for slide-in effect */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+        /* Slide up effect */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        /* End position */
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animate the entire container */
+.home-animation {
+    animation: slideIn 1.5s ease-out forwards;
+    opacity: 0;
+}
+
+/* Animate individual elements */
+.search-field {
+    animation: fadeIn 2s ease-out forwards;
+    opacity: 0;
+}
+
+.slides-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    transition: opacity 0.5s ease;
+    padding: 20px;
+}
+
+/* Styling for the dots at the bottom */
+.dots {
+    text-align: center;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot,
+.active-dot {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 8px;
+    border-radius: 50%;
+    background-color: #bbb;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.active-dot {
+    background-color: #717171;
+}
+
+#slider-button {
+    margin-top: 20px;
+    animation: fadeIn 2s ease-out forwards;
+    opacity: 0;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 25px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    outline: none;
+}

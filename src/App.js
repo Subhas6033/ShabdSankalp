@@ -1,22 +1,19 @@
 
-import React from 'react';
+import React, { useState } from "react";
+import { I18nextProvider } from 'react-i18next';
+import i18n from './i18n';
 import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { Route, Routes } from 'react-router-dom';
-import Home from './components/pages/Home';
-import Aboutus from './components/pages/Aboutus';
-import Services from './components/pages/Services';
-import Sitemap from './components/pages/Sitemap';
-import Login from './components/pages/Login';
-import Contactus from './components/pages/Contactus';
-
-
+import { Home, Aboutus, Services, Sitemap, Login, Contactus } from './components/pages';
 
 function App() {
   return (
     <>
-      <Navbar />
+      <I18nextProvider i18n={i18n}>
+        <Navbar />
+      </I18nextProvider>
       <Routes>
         <Route path='/shabdsankalp' element={<Home />} />
         <Route path='shabdsankalp/about' element={<Aboutus />} />
@@ -29,5 +26,6 @@ function App() {
     </>
   );
 }
+
 
 export default App;

@@ -1,0 +1,149 @@
+
+
+
+/* Doctors Section Styles */
+.doctors {
+    width: 100%;
+    margin-top: 30px;
+    padding: 40px;
+    background-color: #e4e4e4;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.doctors h2 {
+    font-size: 2.5rem;
+    color: #005f73;
+    margin-bottom: 30px;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.doctor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.doctor-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    transition: transform 0.3s ease-in-out;
+    max-width: 250px;
+    text-align: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.doctor-card:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.doctor-card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 4px solid #e0f7fa;
+}
+
+.doctor-card h3 {
+    font-size: 1.4rem;
+    color: #005f73;
+    margin: 10px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.doctor-card p {
+    font-size: 1rem;
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .doctor-card {
+        max-width: 90%;
+    }
+
+    .doctors h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Make sure that all cards are initially hidden and off-screen */
+.doctor-grid {
+    opacity: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    transition: opacity 1s ease;
+}
+
+.doctor-card {
+    height: 350px;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(0);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Keyframes for sliding from the left */
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Keyframes for sliding from the right */
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animation class for applying animations */
+.show-grid {
+    opacity: 1;
+}
+
+/* Different animations for left and right cards */
+.left-card {
+    animation: slideInFromLeft 1s forwards;
+}
+
+.right-card {
+    animation: slideInFromRight 1s forwards;
+}
+
+/* MOre doctors button */
+.more-doctors-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.more-doctors-btn:hover {
+    background-color: #0056b3;
+}

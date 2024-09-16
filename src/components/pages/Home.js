@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import '../Home.css';
+import Doctor from '../img/Doctor.jpg';
 
 export default function Home() {
   const [animate, setAnimate] = useState(false);
@@ -19,6 +20,9 @@ export default function Home() {
 
       {/* Render the Slider Component */}
       <Slider />
+
+      {/* Render the Doctors Component */}
+      <Doctors />
     </div>
   );
 }
@@ -82,9 +86,7 @@ const Slider = () => {
             key={index}
             className={index === currentSlide ? 'active-dot' : 'dot'}
             onClick={() => handleDotClick(index)} // Add click event for dot
-          >
-            
-          </span>
+          />
         ))}
       </div>
 
@@ -96,6 +98,79 @@ const Slider = () => {
           </Link>
         </button>
       )}
+    </div>
+  );
+};
+
+// Doctors component for the Home page
+
+const doctorsList = [
+  { name: "Dr. Subhas Mondal", specialty: "Cardiology", image: Doctor },
+  { name: "Dr. Subhojit Kundu", specialty: "Dermatology", image: Doctor },
+  { name: "Dr. Rajib Pandit", specialty: "Neurology", image: Doctor },
+  { name: "Dr. Prabir Santra", specialty: "Psychiatry", image: Doctor },
+  { name: "Dr. Rakesh Santra", specialty: "Dental", image: Doctor },
+  { name: "Dr. Anwesha Dey", specialty: "Gastroenterology", image: Doctor },
+  { name: "Dr. Pritam Kundu", specialty: "Orthopedics", image: Doctor },
+  { name: "Dr. Raja Dey", specialty: "Oncology", image: Doctor },
+  { name: "Dr. Suman Nayak", specialty: "Neurosurgery", image: Doctor },
+  { name: "Dr. Sumit Ghosh", specialty: "Cardiothoracic Surgery", image: Doctor },
+  // { name: "Dr. Intekhab Alam", specialty: "Pulmonary Medicine", image: Doctor },
+  // { name: "Dr. Sudarshana Bhattacharaya", specialty: "General Surgery", image: Doctor },
+];
+const Doctors = () => {
+  const doctorGridRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Apply the show-grid class to make the grid visible
+            entry.target.classList.add('show-grid');
+
+            // Add left and right animations to the cards
+            const doctorCards = entry.target.querySelectorAll('.doctor-card');
+            doctorCards.forEach((card, index) => {
+              // Apply animation based on card index
+              if (index % 2 === 0) {
+                card.classList.add('left-card'); // Animate from left
+              } else {
+                card.classList.add('right-card'); // Animate from right
+              }
+            });
+          }
+        });
+      },
+      { threshold: 0.1 } // Trigger when 10% of the element is visible
+    );
+
+    if (doctorGridRef.current) {
+      observer.observe(doctorGridRef.current);
+    }
+
+    return () => {
+      if (doctorGridRef.current) {
+        observer.unobserve(doctorGridRef.current);
+      }
+    };
+  }, []);
+
+  return (
+    <div className="doctors">
+      <h2>Our Doctors</h2>
+      <div className="doctor-grid" ref={doctorGridRef}>
+        {doctorsList.map((doctor, index) => (
+          <div key={index} className="doctor-card">
+            <img src={doctor.image} alt={doctor.name} />
+            <h3>{doctor.name}</h3>
+            <p>{doctor.specialty}</p>
+          </div>
+        ))}
+      </div>
+      {/* More Doctors button */}
+      <button className="more-doctors-btn"><Link to = 'shabdsankalp/doctors'>More Doctors</Link></button>
+       {/* Latter We will decide if we route this path or not... */}
     </div>
   );
 };

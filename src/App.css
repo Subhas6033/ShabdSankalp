@@ -16,12 +16,6 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -39,4 +33,35 @@
 
 body{
   height: 100vh;
+}
+
+/* Animation for slide-in effect */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+    /* Slide up effect */
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    /* End position */
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animate the entire container */
+.App body {
+  animation: slideIn 1.5s ease-out forwards;
+  opacity: 0;
 }
